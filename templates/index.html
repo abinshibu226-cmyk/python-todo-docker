@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Python To-Do App</title>
 </head>
 <body>
     <h1>My To-Do List</h1>
+
+    <form action="/add" method="POST">
+        <input type="text" name="todo" placeholder="Enter a task..." required>
+        <button type="submit">Add Task</button>
+    </form>
+
     <ul>
         {% for todo in todos %}
             <li>{{ todo }}</li>
